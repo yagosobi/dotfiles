@@ -18,12 +18,25 @@ require("lazy").setup({
 	spec = {
 		{ import = "plugins" },
 	},
-	defaults = {
-		lazy = false,
-		version = false,
+	change_detection = {
+		notify = false,
 	},
-	checker = {
-		enabled = true,
+	performance = {
+		rtp = {
+			-- disable some rtp plugins
+			disabled_plugins = {
+				"gzip",
+				-- "matchit",
+				-- "matchparen",
+				"man",
+				"rplugin",
+				"netrwPlugin",
+				"tarPlugin",
+				"tohtml",
+				"tutor",
+				"zipPlugin",
+			},
+		},
 	},
 	ui = {
 		backdrop = 100,

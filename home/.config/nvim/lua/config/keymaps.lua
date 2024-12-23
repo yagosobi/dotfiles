@@ -29,33 +29,22 @@ map("n", "c.", [[:%s/\<<C-r><C-w>\>//g<Left><Left>]], { desc = "search and repla
 map("n", "c>", [[:%s/\V<C-r><C-a>//g<Left><Left>]], { desc = "search and replace WORD under cursor" })
 
 -- turn off search matches with double-<esc>
-map("n", "<Esc><Esc>", "<Esc>:nohlsearch<CR>", { silent = true })
+map("n", "<Esc>", ":nohlsearch<CR>", { silent = true })
 
 -- keep visual selection when (de)indenting
 map("v", "<", "<gv", {})
 map("v", ">", ">gv", {})
 
--- newline without insert mode
-map(
-  "n",
-  "<leader>o",
-  [[:<C-u>call append(line("."), repeat([""], v:count1))<CR>]],
-  { silent = true, desc = "newline below (no insert-mode)" }
-)
-map(
-  "n",
-  "<leader>O",
-  [[:<C-u>call append(line(".")-1, repeat([""], v:count1))<CR>]],
-  { silent = true, desc = "newline above (no insert-mode)" }
-)
+-- create new lines in Normal mode
+map("n", "<leader>o", "o<Esc>^Da<Esc>k", { desc = "newline below", silent = true })
+map("n", "<leader>O", "O<Esc>^Da<Esc>j", { desc = "newline above", silent = true })
 
--- yank
-map({ "n", "v" }, "<leader>v", [["+p]], { desc = "paste AFTER from clipboard" })
-map({ "n", "v" }, "<leader>V", [["+P]], { desc = "paste BEFORE from clipboard" })
-map({ "n", "v" }, "<leader>s", [["*p]], { desc = "paste AFTER from primary" })
-map({ "n", "v" }, "<leader>S", [["*P]], { desc = "paste BEFORE from primary" })
-map({ "n", "v" }, "<leader>p", [["0p]], { desc = "paste AFTER  from yank (reg:0)" })
-map({ "n", "v" }, "<leader>P", [["0P]], { desc = "paste BEFORE from yank (reg:0)" })
-map("n", "<leader>D", [["_D]], { desc = "blackhole 'D'" })
-map("n", "<leader>C", [["_C]], { desc = "blackhole 'C'" })
-map({ "n", "v" }, "<leader>c", [["_c]], { desc = "blackhole 'c'" })
+-- without yanking
+map({ "n", "v" }, "<leader>c", [["_c]], { desc = "change without register" })
+map({ "n", "v" }, "<leader>d", [["_d]], { desc = "delete without register" })
+map("v", "<leader>p", [["_dP]], { desc = "paste without register" })
+
+-- disable ex mode and remap recording
+map("n", "Q", "<nop>", {})
+map("n", "q", "<nop>", {})
+map("n", "<C-q>", "q", {})

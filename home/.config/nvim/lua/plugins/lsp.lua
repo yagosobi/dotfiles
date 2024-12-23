@@ -13,15 +13,15 @@ return {
 		dependencies = {
 			"williamboman/mason.nvim",
 		},
+		opts = {
+			ensure_installed = { "lua_ls" },
+		},
 		config = function()
 			local capabilities = vim.tbl_deep_extend(
 				"force",
 				vim.lsp.protocol.make_client_capabilities(),
 				require("cmp_nvim_lsp").default_capabilities()
 			)
-			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls" },
-			})
 			require("mason-lspconfig").setup_handlers({
 				function(server_name)
 					require("lspconfig")[server_name].setup({
@@ -41,18 +41,17 @@ return {
 			"williamboman/mason-lspconfig.nvim",
 		},
 		config = function()
-			local keymap = vim.keymap.set
-			keymap("n", "<leader>la", vim.lsp.buf.code_action, { desc = "code action" })
-			keymap("n", "<leader>lf", vim.lsp.buf.format, { desc = "format document" })
-			keymap("n", "<leader>rn", vim.lsp.buf.rename, { desc = "rename symbol" })
-			keymap("n", "<leader>ld", vim.lsp.buf.definition, { desc = "go to definition" })
-			keymap("n", "<leader>li", vim.lsp.buf.implementation, { desc = "go to implementation" })
-			keymap("n", "<leader>lr", vim.lsp.buf.references, { desc = "to to references" })
-			keymap("n", "<leader>lh", vim.lsp.buf.signature_help, { desc = "signature help" })
-			keymap("n", "K", vim.lsp.buf.hover, { desc = "hover document" })
-			keymap("n", "J", vim.diagnostic.open_float, { desc = "show line diagnostics" })
-			keymap("n", "[d", vim.diagnostic.goto_prev, { desc = "go to previous diagnostic" })
-			keymap("n", "]d", vim.diagnostic.goto_next, { desc = "go to next diagnostic" })
+			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "rename symbol" })
+			vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, { desc = "code action" })
+			vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { desc = "format document" })
+			vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition, { desc = "go to definition" })
+			vim.keymap.set("n", "<leader>li", vim.lsp.buf.implementation, { desc = "go to implementation" })
+			vim.keymap.set("n", "<leader>lr", vim.lsp.buf.references, { desc = "to to references" })
+			vim.keymap.set("n", "<leader>ls", vim.lsp.buf.signature_help, { desc = "signature help" })
+			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "hover document" })
+			vim.keymap.set("n", "J", vim.diagnostic.open_float, { desc = "show line diagnostics" })
+			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "go to previous diagnostic" })
+			vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "go to next diagnostic" })
 
 			-- diagnostic ui
 			vim.diagnostic.config({

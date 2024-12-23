@@ -3,8 +3,8 @@ return {
 	keys = {
 		{
 			"<leader>n",
-			"<cmd>Oil<cr>",
-			desc = "Oil: Open parent directory",
+			":Oil<cr>",
+			desc = "oil",
 		},
 	},
 	opts = {
@@ -18,6 +18,7 @@ return {
 			["<C-b>"] = { "actions.parent", mode = "n" },
 			["~"] = { "actions.open_cwd", mode = "n" },
 			["<leader>n"] = { "actions.close", mode = "n" },
+			["<leader>e"] = { "actions.close", mode = "n" },
 			["-"] = false,
 			["_"] = false,
 			["`"] = false,

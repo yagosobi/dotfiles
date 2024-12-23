@@ -9,7 +9,6 @@ return {
 		{ "<leader>fs", "<cmd>FzfLua live_grep_native<cr>" },
 		{ "<leader>fk", "<cmd>FzfLua keymaps<cr>" },
 		{ "<leader>fh", "<cmd>FzfLua helptags<cr>" },
-
 		{ "<leader>fd", "<cmd>FzfLua lsp_definitions<cr>" },
 		{ "<leader>fi", "<cmd>FzfLua lsp_implementations<cr>" },
 		{ "<leader>fr", "<cmd>FzfLua lsp_references<cr>" },
