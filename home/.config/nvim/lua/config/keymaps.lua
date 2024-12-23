@@ -9,12 +9,12 @@ vim.cmd([[
 ]]) -- h/t https://jeffkreeftmeijer.com/vim-number/
 
 -- keep cursor centered when scrolling
-map("n", "<C-d>", "<C-d>zz", { desc = "Scroll down and center" })
-map("n", "<C-u>", "<C-u>zz", { desc = "Scroll up and center" })
+map("n", "<C-d>", "<C-d>zz", { desc = "scroll down and center" })
+map("n", "<C-u>", "<C-u>zz", { desc = "scroll up and center" })
 
 -- save and quit
-map({ "n", "v", "i" }, "<C-S>", "<C-c>:update<cr>", { desc = "Save" })
-map("n", "<leader>q", ":q<cr>", { desc = "Quit" })
+map({ "n", "v", "i" }, "<C-S>", "<C-c>:update<cr>", { desc = "save" })
+map("n", "<leader>q", ":q<cr>", { desc = "quit" })
 
 -- keep matches center screen when cycling with n|n
 map("n", "n", "nzzzv", { desc = "Fwd  search '/' or '?'" })
