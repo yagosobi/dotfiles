@@ -27,7 +27,7 @@ return {
 				start_insert = false,
 				border = "rounded",
 			},
-			panel = { enabled = false }, -- Disable panel
+			panel = { enabled = false },
 		},
 	},
 	build = "make",
