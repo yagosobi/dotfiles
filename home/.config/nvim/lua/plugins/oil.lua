@@ -4,8 +4,8 @@ return {
 	keys = {
 		{
 			"<leader>n",
-			":Oil<cr>",
-			desc = "Oil",
+			"<cmd>Oil<cr>",
+			desc = "oil",
 		},
 	},
 	opts = {

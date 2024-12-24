@@ -6,12 +6,12 @@ return {
 	keys = {
 		{
 			"<leader>w",
-			":HopWordCurrentLineAC<cr>",
+			"<cmd>HopWordCurrentLineAC<cr>",
 			desc = "hop word ac",
 		},
 		{
 			"<leader>b",
-			":HopWordCurrentLineBC<cr>",
+			"<cmd>HopWordCurrentLineBC<cr>",
 			desc = "hop word bc",
 		},
 	},

@@ -2,7 +2,7 @@ return {
 	"nvim-tree/nvim-tree.lua",
 	cmd = { "NvimTreeToggle", "NvimTreeFindFileToggle" },
 	keys = {
-		{ "<leader>e", "<Esc>:NvimTreeFindFileToggle<CR>", desc = "NvimTree" },
+		{ "<leader>e", "<cmd>NvimTreeFindFileToggle<CR>", desc = "nvimtree" },
 	},
 	opts = function()
 		local options = {
