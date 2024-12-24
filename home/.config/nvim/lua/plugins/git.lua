@@ -31,7 +31,7 @@ return {
 						gs.next_hunk()
 					end)
 					return "<Ignore>"
-				end, { expr = true, desc = "Next hunk" })
+				end, { expr = true, desc = "next hunk" })
 
 				map("n", "[h", function()
 					if vim.wo.diff then
@@ -41,28 +41,28 @@ return {
 						gs.prev_hunk()
 					end)
 					return "<Ignore>"
-				end, { expr = true, desc = "Previous hunk" })
+				end, { expr = true, desc = "previous hunk" })
 
 				-- Actions
-				map("n", "<leader>hs", gs.stage_hunk, { desc = "Stage hunk" })
-				map("n", "<leader>hr", gs.reset_hunk, { desc = "Reset hunk" })
+				map("n", "<leader>hs", gs.stage_hunk, { desc = "stage hunk" })
+				map("n", "<leader>hr", gs.reset_hunk, { desc = "reset hunk" })
 				map("v", "<leader>hs", function()
 					gs.stage_hunk({ vim.fn.line("."), vim.fn.line("v") })
-				end, { desc = "Stage hunk (visual)" })
+				end, { desc = "stage hunk (visual)" })
 				map("v", "<leader>hr", function()
 					gs.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
-				end, { desc = "Reset hunk (visual)" })
-				map("n", "<leader>hS", gs.stage_buffer, { desc = "Stage buffer" })
-				map("n", "<leader>hu", gs.undo_stage_hunk, { desc = "Undo stage hunk" })
-				map("n", "<leader>hR", gs.reset_buffer, { desc = "Reset buffer" })
-				map("n", "<leader>hp", gs.preview_hunk, { desc = "Preview hunk" })
+				end, { desc = "reset hunk (visual)" })
+				map("n", "<leader>hS", gs.stage_buffer, { desc = "stage buffer" })
+				map("n", "<leader>hu", gs.undo_stage_hunk, { desc = "undo stage hunk" })
+				map("n", "<leader>hR", gs.reset_buffer, { desc = "reset buffer" })
+				map("n", "<leader>hp", gs.preview_hunk, { desc = "preview hunk" })
 				map("n", "<leader>hb", function()
 					gs.blame_line({ full = true })
-				end, { desc = "Blame line" })
-				map("n", "<leader>hd", gs.diffthis, { desc = "Diff this" })
+				end, { desc = "blame line" })
+				map("n", "<leader>hd", gs.diffthis, { desc = "diff this" })
 				map("n", "<leader>hD", function()
 					gs.diffthis("~")
-				end, { desc = "Diff this (cached)" })
+				end, { desc = "diff this (cached)" })
 			end,
 		},
 	},

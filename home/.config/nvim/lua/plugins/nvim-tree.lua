@@ -12,8 +12,6 @@ return {
 			update_cwd = true,
 			renderer = {
 				hidden_display = "all",
-				group_empty = true,
-				add_trailing = true,
 				highlight_git = true,
 				icons = {
 					show = {
@@ -22,9 +20,6 @@ return {
 				},
 			},
 			view = {
-				number = true,
-				relativenumber = true,
-				width = 20,
 				float = {
 					enable = true,
 					open_win_config = {
