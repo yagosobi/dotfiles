@@ -2,7 +2,7 @@ return {
 	"brenoprata10/nvim-highlight-colors",
 	event = "VeryLazy",
 	keys = {
-		{ "<leader><leader>c", "<cmd>HighlightColors Toggle<cr>" },
+		{ "<leader>tc", "<cmd>HighlightColors Toggle<cr>", desc = "toggle highlight colors" },
 	},
 	opts = {
 		---Render style

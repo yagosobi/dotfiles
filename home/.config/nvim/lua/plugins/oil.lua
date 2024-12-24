@@ -13,7 +13,6 @@ return {
 		delete_to_trash = true,
 		columns = {
 			"icon",
-			"size",
 		},
 		view_options = {
 			show_hidden = true,
@@ -23,10 +22,12 @@ return {
 			["~"] = { "actions.open_cwd", mode = "n" },
 			["<leader>n"] = { "actions.close", mode = "n" },
 			["<leader>e"] = { "actions.close", mode = "n" },
+			["<C-r>"] = "actions.refresh",
 			["-"] = false,
 			["_"] = false,
 			["`"] = false,
 			["<C-h>"] = false,
+			["<C-l>"] = false,
 			["<C-t>"] = false,
 			["<C-s>"] = false,
 		},
