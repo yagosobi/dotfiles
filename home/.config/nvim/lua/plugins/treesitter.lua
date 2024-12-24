@@ -64,14 +64,14 @@ return {
 				enable = true,
 				set_jumps = true,
 				goto_previous_start = {
-					["[f"] = { query = "@function.outer", desc = "Previous function" },
-					["[c"] = { query = "@class.outer", desc = "Previous class" },
-					["[p"] = { query = "@parameter.inner", desc = "Previous parameter" },
+					["[f"] = { query = "@function.outer", desc = "previous function" },
+					["[c"] = { query = "@class.outer", desc = "previous class" },
+					["[p"] = { query = "@parameter.inner", desc = "previous parameter" },
 				},
 				goto_next_start = {
-					["]f"] = { query = "@function.outer", desc = "Next function" },
-					["]c"] = { query = "@class.outer", desc = "Next class" },
-					["]p"] = { query = "@parameter.inner", desc = "Next parameter" },
+					["]f"] = { query = "@function.outer", desc = "next function" },
+					["]c"] = { query = "@class.outer", desc = "next class" },
+					["]p"] = { query = "@parameter.inner", desc = "next parameter" },
 				},
 			},
 			swap = {

@@ -8,6 +8,9 @@ vim.cmd([[
   augroup END
 ]]) -- h/t https://jeffkreeftmeijer.com/vim-number/
 
+map({ "n", "v" }, "H", "^", {})
+map({ "n", "v" }, "L", "$", {})
+
 -- keep cursor centered when scrolling
 map("n", "<C-d>", "<C-d>zz", { desc = "scroll down and center" })
 map("n", "<C-u>", "<C-u>zz", { desc = "scroll up and center" })

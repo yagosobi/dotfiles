@@ -46,12 +46,12 @@ return {
 			vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, { desc = "format document" })
 			vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition, { desc = "go to definition" })
 			vim.keymap.set("n", "<leader>li", vim.lsp.buf.implementation, { desc = "go to implementation" })
-			vim.keymap.set("n", "<leader>lr", vim.lsp.buf.references, { desc = "to to references" })
+			vim.keymap.set("n", "<leader>lr", vim.lsp.buf.references, { desc = "go to references" })
 			vim.keymap.set("n", "<leader>ls", vim.lsp.buf.signature_help, { desc = "signature help" })
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "hover document" })
 			vim.keymap.set("n", "J", vim.diagnostic.open_float, { desc = "show line diagnostics" })
-			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "go to previous diagnostic" })
-			vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "go to next diagnostic" })
+			vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "previous diagnostic" })
+			vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "next diagnostic" })
 
 			-- diagnostic ui
 			vim.diagnostic.config({

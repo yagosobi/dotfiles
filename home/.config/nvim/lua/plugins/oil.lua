@@ -5,16 +5,19 @@ return {
 		{
 			"<leader>n",
 			":Oil<cr>",
-			desc = "oil",
+			desc = "Oil",
 		},
 	},
 	opts = {
 		default_file_explorer = true,
+		delete_to_trash = true,
 		columns = {
 			"icon",
 			"size",
 		},
-		delete_to_trash = true,
+		view_options = {
+			show_hidden = true,
+		},
 		keymaps = {
 			["<C-b>"] = { "actions.parent", mode = "n" },
 			["~"] = { "actions.open_cwd", mode = "n" },
@@ -26,9 +29,6 @@ return {
 			["<C-h>"] = false,
 			["<C-t>"] = false,
 			["<C-s>"] = false,
-		},
-		view_options = {
-			show_hidden = true,
 		},
 	},
 }
